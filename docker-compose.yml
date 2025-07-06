@@ -1,0 +1,10 @@
+services:
+  # Serviço da sua aplicação Python
+  app:
+    build: .
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app # Mapeia o código local para o contêiner (ótimo para desenvolvimento com --reload)
+    # A porta 8000 é exposta para a rede interna do Docker pelo Dockerfile.
